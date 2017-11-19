@@ -1,31 +1,7 @@
-# Docker Zencash Secure Node
-
-This repository will help you setup a zencash node with a single bash script.
-
-The script will install Docker on a fresh Ubuntu VM and provision the following
-containers:
-
-- zend https://hub.docker.com/r/whenlambomoon/zend/
-- Securenodetracker https://hub.docker.com/r/whenlambomoon/secnodetracker/
-- neilpang/acme.sh https://hub.docker.com/r/neilpang/acme.sh
-
-acme.sh will run as a docker container and auto-renew your SSL certificates when required.
-
-## Requirements
-
-You will need a VPS with at least 4GB ram (swap is OK) to run a Zencash secure node. You may use my DigitalOcean referral link to get $10 free credit https://m.do.co/c/afbafb6012b6
-
-The script has been tested with Ubuntu 16.04 but should work on any other Linux distribution.
-
-You will also need a domain name to point to your VPS.
-
-## Installation
-
-Invoking the script is best done on a fresh installation. Re-running the install script should not
-cause any issues.
+# 1) Unbuntu 16.04, 2) Docker 3) acme cert and auto renew 4) Domain and nodes.  
 
 ```
-git clone https://github.com/WhenLamboMoon/docker-zen-node
+git clone https://github.com/phobos777/docker-zen-node
 ./install.sh stakeaddr email fqdn region
 ```
 
@@ -36,7 +12,7 @@ git clone https://github.com/WhenLamboMoon/docker-zen-node
 
 Example:
 
-`./install.sh ztjcr2DSYhMZZ3WFFeoK2hDxhmK4VP3QcgK email@example.com zennode.example.com sea`
+`./install.sh ztjcr2DSYhMZZ3WFFeoK2hDxhmK4VP3QcgK email@example.com zennode.example.com na`
 
 The script will install the required dependencies and deploy the three containers on your host.
 
@@ -74,15 +50,3 @@ If you need to execute commands with `zen-cli` you will need to append the follo
 docker exec zen-node gosu user zen-cli
 ```
 
-This is because zend is run as a non-root user using `gosu`. Removing `gosu user` will return
-you an error due to missing config files.
-
-## Donations
-
-Donations are appreciated:
-
-*BTC* 1FN8PRaY3CTNVZy2Fbix9fHK2ASwJ4zeys
-
-*ETH* 0x4f78813f23f443deb75a5267bed8c282b74f571b
-
-*ZEN* znZ2NFrmV6jaiq1hEnKxzApKzgGqptZNq7o
