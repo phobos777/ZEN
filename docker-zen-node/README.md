@@ -1,4 +1,4 @@
-# 1. Unbuntu 16.04, 2. Docker 3. acme cert and auto renew 4. Domain and nodes
+# ZEN Securenode: uses Unbuntu 16.04, Docker, Acme Cert and auto renew, Domain DNS
 
 ```
 git clone https://github.com/phobos777/docker-zen-node && cd docker-zen-node
