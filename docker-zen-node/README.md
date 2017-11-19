@@ -12,14 +12,14 @@ git clone https://github.com/phobos777/docker-zen-node && cd docker-zen-node
 
 `./install.sh ztjcr2DSYhM44gZ3WFFeoK2hDxhmK4VP3QcgK email@example.com zennode.example.com na` 
 
-##5. Send 1 ZEN to Private address on node
-##6. Check private balance:
+## Send 1 ZEN to Private address on node
+## Check private balance:
 
 ```
 docker exec zen-node gosu user zen-cli z_gettotalbalance
 ``` 
 
-##7. VPS to fully update to the latest block.status:
+## VPS to fully update to the latest block.status:
 
 ```
 docker exec zen-node gosu user zen-cli getinfo
